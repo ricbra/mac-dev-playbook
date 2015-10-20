@@ -1,0 +1,26 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_sudoers: yes
+
+homebrew_installed_packages:
+  - ansible
+  - boot2docker
+  - docker
+  - git
+  - ssh-copy-id
+  - openssl
+  - wget
+  - brew-cask
+
+homebrew_taps:
+  - caskroom/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - google-chrome
+  - dropbox
+  - firefox
+  - limechat
+  - vagrant
+  - virtualbox
