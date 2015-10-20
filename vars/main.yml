@@ -1,6 +1,4 @@
 ---
-downloads: ~/.ansible-downloads/
-
 configure_sudoers: yes
 
 homebrew_installed_packages:
