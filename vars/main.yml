@@ -13,6 +13,7 @@ homebrew_installed_packages:
   - dockutil
   - zsh
   - tmux
+  - mercurial
 
 homebrew_taps:
   - caskroom/cask
@@ -26,7 +27,8 @@ homebrew_cask_apps:
   - limechat
   - vagrant
   - virtualbox
-  - phpstorm
+  - phpstorm8
   - caskroom/homebrew-versions/java6
   - slack
   - istat-menus
+  - atom

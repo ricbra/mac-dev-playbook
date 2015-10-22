@@ -22,3 +22,15 @@
 
 - name: Set zsh as shell
   shell: defaults write com.apple.Terminal 'Shell' -string '/bin/zsh'
+
+- name: check if gvm is installed
+  shell: test -d /Users/richard/.gvm && echo "yes" || echo "no"
+  register: is_gvm_installed
+
+- name: download gvm
+  when: is_gvm_installed.stdout == "no"
+  get_url: url=https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer dest=/Users/richard/gvm_install.sh
+
+- name: install gvm
+  when: is_gvm_installed.stdout == "no"
+  command: bash /Users/richard/gvm_install.sh
