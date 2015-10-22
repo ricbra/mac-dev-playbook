@@ -8,7 +8,4 @@
 
   roles:
     - geerlingguy.homebrew
-
-  #tasks:
-  #  - include: tasks/ansible-setup.yml
-  #  - include: tasks/preferences.yml
+    - dotfiles

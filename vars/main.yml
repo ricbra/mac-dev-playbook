@@ -10,9 +10,13 @@ homebrew_installed_packages:
   - openssl
   - wget
   - brew-cask
+  - dockutil
+  - zsh
+  - tmux
 
 homebrew_taps:
   - caskroom/cask
+  - caskroom/versions
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -22,3 +26,7 @@ homebrew_cask_apps:
   - limechat
   - vagrant
   - virtualbox
+  - phpstorm
+  - caskroom/homebrew-versions/java6
+  - slack
+  - istat-menus
