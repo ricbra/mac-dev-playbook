@@ -34,3 +34,16 @@
 - name: install gvm
   when: is_gvm_installed.stdout == "no"
   command: bash /Users/richard/gvm_install.sh
+
+- name: Remove all crap from Dock
+  shell: dockutil --remove '{{ item }}'
+  ignore_errors: true
+  with_items: dockitems_to_remove
+
+- name: Check if items in dock exist
+  shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
+  with_items: dockitems_to_persist
+
+- name: Fix order
+  shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
+  with_items: dockitems_to_persist
