@@ -36,6 +36,9 @@ homebrew_cask_apps:
   - slack
   - istat-menus
   - atom
+  - android-file-transfer
+  - limechat
+  - xquartz
 
 dockitems_to_remove:
   - Launchpad
