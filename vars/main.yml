@@ -17,6 +17,7 @@ homebrew_installed_packages:
   - phpmd
   - php-code-sniffer
   - php-cs-fixer
+  - phpunit
 
 homebrew_taps:
   - caskroom/cask
