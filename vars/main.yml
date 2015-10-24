@@ -70,6 +70,9 @@ dockitems_to_persist:
   - name: Slack
     path: /Applications/Slack.app
     pos: 4
+  - name: VirtualBox
+    path: /Applications/VirtualBox.app
+    pos: 5
   - name: Terminal
     path: /Applications/Utilities/Terminal.app
-    pos: 5
+    pos: 6
