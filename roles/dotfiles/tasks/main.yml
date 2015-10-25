@@ -59,3 +59,6 @@
 - name: Set permissions on symfony
   file: path=/usr/local/bin/symfony mode=0755
 
+- name: Set datetime zone
+  lineinfile: dest=/usr/local/etc/php/5.6/php.ini line="date.timezone=Europe/Amsterdam"
+

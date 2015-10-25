@@ -18,6 +18,8 @@ homebrew_installed_packages:
   - php-code-sniffer
   - php-cs-fixer
   - phpunit
+  - php56
+  - php56-intl
 
 homebrew_taps:
   - caskroom/cask
