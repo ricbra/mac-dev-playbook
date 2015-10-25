@@ -47,3 +47,15 @@
 - name: Fix order
   shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
   with_items: dockitems_to_persist
+
+- name: Check if symfony is installed
+  stat: path=/usr/local/bin/symfony
+  register: sf
+
+- name: Download symfony installer
+  get_url: url=http://symfony.com/installer dest=/usr/local/bin/symfony
+  when: sf.stat.exists == false
+
+- name: Set permissions on symfony
+  file: path=/usr/local/bin/symfony mode=0755
+
