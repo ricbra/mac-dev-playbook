@@ -41,7 +41,7 @@ homebrew_cask_apps:
   - atom
   - android-file-transfer
   - limechat
-  - xquartz
+  - spotify
 
 dockitems_to_remove:
   - Launchpad
@@ -79,3 +79,6 @@ dockitems_to_persist:
   - name: Terminal
     path: /Applications/Utilities/Terminal.app
     pos: 6
+  - name: Spotify
+    path: /Applications/Spotify.app
+    pos: 7
