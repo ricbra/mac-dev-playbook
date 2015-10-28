@@ -20,6 +20,7 @@ homebrew_installed_packages:
   - phpunit
   - php56
   - php56-intl
+  - php56-xdebug
 
 homebrew_taps:
   - caskroom/cask
