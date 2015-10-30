@@ -3,7 +3,6 @@ configure_sudoers: yes
 homebrew_install_path: /usr/local/homebrew
 homebrew_installed_packages:
   - ansible
-  - boot2docker
   - docker
   - git
   - ssh-copy-id
@@ -43,6 +42,7 @@ homebrew_cask_apps:
   - android-file-transfer
   - limechat
   - spotify
+  - dockertoolbox
 
 dockitems_to_remove:
   - Launchpad
