@@ -1,6 +1,6 @@
 ---
 - name: Clone dotfiles
-  git: repo=https://github.com/ricbra/dotfiles.git dest=/Users/richard/dotfiles recursive=yes
+  git: repo=https://github.com/ricbra/dotfiles.git dest=/Users/richard/dotfiles recursive=yes update=no
 
 - name: Get current Terminal profile.
   shell: defaults read com.apple.Terminal 'Default Window Settings'
@@ -38,15 +38,15 @@
 - name: Remove all crap from Dock
   shell: dockutil --remove '{{ item }}'
   ignore_errors: true
-  with_items: dockitems_to_remove
+  with_items: "{{ dockitems_to_remove  }}"
 
 - name: Check if items in dock exist
   shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
-  with_items: dockitems_to_persist
+  with_items: "{{ dockitems_to_persist }}"
 
 - name: Fix order
   shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
-  with_items: dockitems_to_persist
+  with_items: "{{ dockitems_to_persist }}"
 
 - name: Check if symfony is installed
   stat: path=/usr/local/bin/symfony
@@ -60,5 +60,8 @@
   file: path=/usr/local/bin/symfony mode=0755
 
 - name: Set datetime zone
-  lineinfile: dest=/usr/local/etc/php/5.6/php.ini line="date.timezone=Europe/Amsterdam"
+  lineinfile: dest=/usr/local/etc/php/7.0/php.ini line="date.timezone=Europe/Amsterdam"
 
+- name: Install npm packages
+  npm:  name={{ item }} global=yes
+  with_items: "{{ npm_packages }}"

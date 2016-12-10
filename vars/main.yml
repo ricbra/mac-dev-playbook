@@ -1,14 +1,11 @@
 ---
-configure_sudoers: yes
 homebrew_install_path: /usr/local/homebrew
 homebrew_installed_packages:
   - ansible
   - docker
   - git
   - ssh-copy-id
-  - openssl
   - wget
-  - brew-cask
   - dockutil
   - zsh
   - tmux
@@ -17,9 +14,15 @@ homebrew_installed_packages:
   - php-code-sniffer
   - php-cs-fixer
   - phpunit
-  - php56
-  - php56-intl
-  - php56-xdebug
+  - php70
+  - php70-intl
+  - php70-imagick
+  - php70-mcrypt
+  - tree
+  - npm
+  - yarn
+  - docker-compose
+  - docker-machine-nfs
 
 homebrew_taps:
   - caskroom/cask
@@ -29,20 +32,16 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - google-chrome
-  - dropbox
   - firefox
-  - limechat
   - vagrant
   - virtualbox
-  - phpstorm8
-  - caskroom/homebrew-versions/java6
+  - phpstorm
   - slack
   - istat-menus
   - atom
   - android-file-transfer
-  - limechat
   - spotify
-  - dockertoolbox
+  - hipchat
 
 dockitems_to_remove:
   - Launchpad
@@ -60,6 +59,7 @@ dockitems_to_remove:
   - App Store
   - System Preferences
   - Calendar
+  - Siri
 
 dockitems_to_persist:
   - name: Google Chrome
@@ -83,3 +83,7 @@ dockitems_to_persist:
   - name: Spotify
     path: /Applications/Spotify.app
     pos: 7
+
+npm_packages:
+  - grunt
+  - bower
