@@ -83,7 +83,12 @@ dockitems_to_persist:
   - name: Spotify
     path: /Applications/Spotify.app
     pos: 7
+  - name: HipChat
+    path: /Applications/HipChat.app
+    pos: 8
+
 
 npm_packages:
   - grunt
   - bower
+  - sass
