@@ -23,6 +23,8 @@ homebrew_installed_packages:
   - yarn
   - docker-compose
   - docker-machine-nfs
+  - composer
+  - git-extras
 
 homebrew_taps:
   - caskroom/cask
@@ -92,3 +94,4 @@ npm_packages:
   - grunt
   - bower
   - sass
+  - webpack
