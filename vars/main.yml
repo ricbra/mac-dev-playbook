@@ -95,3 +95,5 @@ npm_packages:
   - bower
   - sass
   - webpack
+  - yo
+  - generator-webapp
