@@ -14,10 +14,10 @@ homebrew_installed_packages:
   - php-code-sniffer
   - php-cs-fixer
   - phpunit
-  - php70
-  - php70-intl
-  - php70-imagick
-  - php70-mcrypt
+  - php71
+  - php71-intl
+  - php71-imagick
+  - php71-mcrypt
   - tree
   - npm
   - yarn
