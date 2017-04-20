@@ -12,7 +12,12 @@ For installation:
     $ git clone git@github.com:ricbra/mac-dev-playbook.git
     $ cd mac-dev-playbook
     $ ansible-galaxy install -r requirements.yml
-    $ ansible-playbook -i inventory --ask-sudo-password main.yml
+    
+    For Ansible < 2.0
+    $ ansible-playbook -i inventory --ask-sudo-password main.yml 
+    For Ansible >= 2.0 use 
+    $ ansible-playbook -i inventory --ask-become-pass main.yml 
+    
     $ cd ~/dotfiles
     $ bin/install
     $ bin/setup_osx
