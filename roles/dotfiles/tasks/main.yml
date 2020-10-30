@@ -2,39 +2,6 @@
 - name: Clone dotfiles
   git: repo=https://github.com/ricbra/dotfiles.git dest=/Users/richard/dotfiles recursive=yes update=no
 
-- name: Get current Terminal profile.
-  shell: defaults read com.apple.Terminal 'Default Window Settings'
-  register: terminal_theme
-  changed_when: false
-
-- name: Ensure custom Terminal profile is added.
-  shell: open files/Solarized-Dark.terminal
-  changed_when: false
-  when: "'Solarized-Dark' not in terminal_theme.stdout"
-
-- name: Ensure custom Terminal profile is set as default.
-  shell: "{{ item }}"
-  with_items:
-    - defaults write com.apple.Terminal 'Default Window Settings' -string 'Solarized-Dark'
-    - defaults write com.apple.Terminal 'Startup Window Settings' -string 'Solarized-Dark'
-  changed_when: false
-  when: "'Solarized Dark ansi' not in terminal_theme.stdout"
-
-- name: Set zsh as shell
-  shell: defaults write com.apple.Terminal 'Shell' -string '/bin/zsh'
-
-- name: check if gvm is installed
-  shell: test -d /Users/richard/.gvm && echo "yes" || echo "no"
-  register: is_gvm_installed
-
-- name: download gvm
-  when: is_gvm_installed.stdout == "no"
-  get_url: url=https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer dest=/Users/richard/gvm_install.sh
-
-- name: install gvm
-  when: is_gvm_installed.stdout == "no"
-  command: bash /Users/richard/gvm_install.sh
-
 - name: Remove all crap from Dock
   shell: dockutil --remove '{{ item }}'
   ignore_errors: true
@@ -60,7 +27,7 @@
   file: path=/usr/local/bin/symfony mode=0755
 
 - name: Set datetime zone
-  lineinfile: dest=/usr/local/etc/php/7.0/php.ini line="date.timezone=Europe/Amsterdam"
+  lineinfile: dest=/usr/local/etc/php/7.2/php.ini line="date.timezone=Europe/Amsterdam"
 
 - name: Install npm packages
   npm:  name={{ item }} global=yes

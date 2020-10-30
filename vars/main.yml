@@ -2,34 +2,26 @@
 homebrew_install_path: /usr/local/homebrew
 homebrew_installed_packages:
   - ansible
+  - awscli
   - docker
   - git
   - ssh-copy-id
   - wget
   - dockutil
-  - zsh
-  - tmux
-  - mercurial
   - phpmd
   - php-code-sniffer
   - php-cs-fixer
   - phpunit
-  - php71
-  - php71-intl
-  - php71-imagick
-  - php71-mcrypt
+  - php72
   - tree
   - npm
   - yarn
   - docker-compose
+  - docker-machine
   - docker-machine-nfs
   - composer
   - git-extras
-
-homebrew_taps:
-  - caskroom/cask
-  - caskroom/versions
-  - homebrew/php
+  - openvpn
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -40,10 +32,11 @@ homebrew_cask_apps:
   - phpstorm
   - slack
   - istat-menus
-  - atom
-  - android-file-transfer
   - spotify
-  - hipchat
+  - 1password
+  - alfred
+  - tableplus
+  - postman
 
 dockitems_to_remove:
   - Launchpad
@@ -56,44 +49,34 @@ dockitems_to_remove:
   - Photos
   - Messages
   - FaceTime
-  - iTunes
+  - Music
   - iBooks
   - App Store
   - System Preferences
   - Calendar
   - Siri
+  - TV
+  - Podcasts
 
 dockitems_to_persist:
   - name: Google Chrome
     path: "/Applications/Google Chrome.app"
     pos: 1
-  - name: Firefox
-    path: "/Applications/Firefox.app"
-    pos: 2
   - name: PhpStorm
     path: /Applications/PhpStorm.app
-    pos: 3
+    pos: 2
   - name: Slack
     path: /Applications/Slack.app
-    pos: 4
-  - name: VirtualBox
-    path: /Applications/VirtualBox.app
-    pos: 5
+    pos: 3
   - name: Terminal
-    path: /Applications/Utilities/Terminal.app
-    pos: 6
+    path: /System/Applications/Utilities/Terminal.app
+    pos: 4
   - name: Spotify
     path: /Applications/Spotify.app
-    pos: 7
-  - name: HipChat
-    path: /Applications/HipChat.app
-    pos: 8
-
+    pos: 5
+  - name: TablePlus
+    path: /Applications/TablePlus.app
+    pos: 6
 
 npm_packages:
-  - grunt
-  - bower
-  - sass
   - webpack
-  - yo
-  - generator-webapp
