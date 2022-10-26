@@ -12,16 +12,15 @@ homebrew_installed_packages:
   - php-code-sniffer
   - php-cs-fixer
   - phpunit
-  - php72
   - tree
   - npm
   - yarn
   - docker-compose
-  - docker-machine
-  - docker-machine-nfs
   - composer
   - git-extras
-  - openvpn
+  - php@8.0
+  - php@8.1
+  - php@8.2
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -35,7 +34,6 @@ homebrew_cask_apps:
   - spotify
   - 1password
   - alfred
-  - tableplus
   - postman
 
 dockitems_to_remove:
